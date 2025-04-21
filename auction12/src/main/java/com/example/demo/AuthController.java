@@ -21,27 +21,6 @@ public class AuthController {
     @Autowired
     private userRepository userrepository;
     
-    
-    
-
-//    @PostMapping("/login")
-//    public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
-//        Optional<Users> userOptional = userrepository.findByemail(loginRequest.getEmail());
-//
-//        if (userOptional.isPresent()) {
-//            Users user = userOptional.get();
-//
-//            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-//            if (encoder.matches(loginRequest.getPassword(), user.getPassword())) {
-//                return ResponseEntity.ok("Login successful!");
-//            } else {
-//                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid password");
-//            }
-//        } else {
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
-//        }
-//    }
-
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequest registerRequest) {
